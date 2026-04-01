@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Pure black Netflix Dark palette */
+    --background: 0 0 0;
+    --foreground: 100 0 0;
+    --card: 15 0.02 30;
+    --card-foreground: 100 0 0;
+    --popover: 15 0.02 30;
+    --popover-foreground: 100 0 0;
+    --primary: 100 0 0;
+    --primary-foreground: 0 0 0;
+    --secondary: 20 0.03 30;
+    --secondary-foreground: 100 0 0;
+    --muted: 20 0.02 30;
+    --muted-foreground: 65 0.01 30;
+    --accent: 20 0.03 30;
+    --accent-foreground: 100 0 0;
+    --destructive: 50 0.22 25;
+    --destructive-foreground: 100 0 0;
+    --border: 25 0.02 30;
+    --input: 25 0.02 30;
+    --ring: 50 0.22 25;
+    --radius: 0.75rem;
+    --netflix-red: 50 0.22 25;
+
+    --chart-1: 50 0.2 25;
+    --chart-2: 60 0.15 200;
+    --chart-3: 70 0.12 150;
+    --chart-4: 80 0.1 300;
+    --chart-5: 55 0.18 60;
+
+    --sidebar: 15 0.02 30;
+    --sidebar-foreground: 100 0 0;
+    --sidebar-primary: 50 0.22 25;
+    --sidebar-primary-foreground: 100 0 0;
+    --sidebar-accent: 20 0.03 30;
+    --sidebar-accent-foreground: 100 0 0;
+    --sidebar-border: 25 0.02 30;
+    --sidebar-ring: 50 0.22 25;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Cairo", "system-ui", sans-serif;
+    direction: rtl;
+    background-color: #000000;
+  }
+}
+
+/* Hide scrollbar but allow scrolling */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Ensure no scrollbar on overflow-x scroll elements */
+[style*="scrollbar-width"] {
+  scrollbar-width: none;
+}
+[style*="scrollbar-width"]::-webkit-scrollbar {
+  display: none;
+}
